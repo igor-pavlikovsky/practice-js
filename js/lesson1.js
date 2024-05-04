@@ -33,28 +33,27 @@
 //числа от max до min по зменьшенню
 //Виведіть в консоль суму усіх парних чисел
 
-
 // const max = 100;
 // const min = 10;
 // let total = 0;
 // for (let i = max; i >= min; i--) {
-//     console.log(i); 
+//     console.log(i);
 //     if (i % 2 === 0) {
 //         total += i;
-//     }    
+//     }
 // }
 // console.log(total);
 
 // function numbers (max, min){
 //     let total = 0;
 //     for (let i = max; i >= min; i--) {
-//         console.log(i); 
+//         console.log(i);
 //         if (i % 2 === 0) {
 //             total += i;
-//         }    
+//         }
 //     }
 //     return total;
-    
+
 // }
 // console.log(numbers (100, 10));
 
@@ -128,3 +127,47 @@
 // } else {
 //     alert("Я вас не знаю");
 // }
+
+// В змінній minuteValue є число від 0 до 59.
+// Визначте до якої чверті години входить
+// це число(в першу, другу, треттю чи четверту).
+
+const minuteValue = Math.floor(Math.random() * (59 - 0) + 0);
+// if (minuteValue <= 15) {
+//   console.log(`${minuteValue} - перша чверть`);
+// } else if (minuteValue > 15 && minuteValue <= 30) {
+//   console.log(`${minuteValue} - друга чверть`);
+// } else if (minuteValue > 30 && minuteValue <= 45) {
+//   console.log(`${minuteValue} - третя чверть`);
+// } else {
+//   console.log(`${minuteValue} - четверта чверть`);
+// }
+
+//Якщо число ділитися на 3 повертати
+//fizz якщо ділитися на 5 повертати buzz
+//Якщо ділитися на 3 і на 5 повернути fizzbuzz
+
+// function checkNumber(num) {
+//   if (typeof num !== "number") {
+//     return "Not a number";
+//   }
+//   if (num % 3 === 0 && num % 5 === 0) {
+//     return "fizzbuzz";
+//   }
+//   if (num % 3 === 0) {
+//     return "fizz";
+//   }
+//   if (num % 5 === 0) {
+//     return "buzz";
+//   }
+//   return "шо ти робиш??";
+// }
+// console.log(checkNumber("sas"));
+
+// Переверни рядок у зворотньому порядку
+const string = "Hello";
+let reverse = "";
+for (let i = string.length - 1; i >= 0; i -= 1) {
+  reverse += string[i];
+}
+console.log(reverse.toLowerCase());
