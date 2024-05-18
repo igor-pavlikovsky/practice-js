@@ -19,7 +19,7 @@
 // function logItems (array) {
 //   for (let i = 0; i < array.length; i +=1) {
 //     console.log (`${i + 1} - ${array[i]}`);
-    
+
 //   }
 
 // }
@@ -30,18 +30,32 @@
 // чи є ім'я введене в інпут у цьому масиві і у разі,
 // якщо є - виводить повідомлення "Доступ дозволено"
 // в іншому випадку - "Користувач не знайден"
-const logins = ["Peter", "John", "Igor", "Sasha"];
+// const logins = ["Peter", "John", "Igor", "Sasha"];
 
-function checkLogin (logins) {
-  const login = prompt("Enter Login");
-  // for (const name of logins) {
-  //   if (name === login) {
-  //     return "Доступ дозволено";
-  //   } 
-  // }
-  // return "Користувач не знайден";
-  return logins.includes(login) ? "Доступ дозволено" : "Користувач не знайден";
+// function checkLogin (logins) {
+//   const login = prompt("Enter Login");
+//   // for (const name of logins) {
+//   //   if (name === login) {
+//   //     return "Доступ дозволено";
+//   //   }
+//   // }
+//   // return "Користувач не знайден";
+//   return logins.includes(login) ? "Доступ дозволено" : "Користувач не знайден";
 
+// }
+// console.log(checkLogin(logins));
 
+// напиши функцію яка сумуватиме сусідні числа і пушити в новий масив
+const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
+
+function sum(someArr) {
+  const newArray = [];
+  for (let i = 0; i < someArr.length - 1; i += 1) {
+    const current = someArr[i];
+    const next = someArr[i + 1];
+    newArray.push(current + next);
+  }
+  return newArray;
 }
-console.log(checkLogin(logins));
+
+console.log(sum(someArr));
