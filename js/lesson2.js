@@ -46,16 +46,39 @@
 // console.log(checkLogin(logins));
 
 // напиши функцію яка сумуватиме сусідні числа і пушити в новий масив
-const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
+// const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
 
-function sum(someArr) {
-  const newArray = [];
-  for (let i = 0; i < someArr.length - 1; i += 1) {
-    const current = someArr[i];
-    const next = someArr[i + 1];
-    newArray.push(current + next);
-  }
-  return newArray;
+// function sum(someArr) {
+//   const newArray = [];
+//   for (let i = 0; i < someArr.length - 1; i += 1) {
+//     const current = someArr[i];
+//     const next = someArr[i + 1];
+//     newArray.push(current + next);
+//   }
+//   return newArray;
+// }
+
+// console.log(sum(someArr));
+
+//Напиши скрипт, який для об'єкту user,
+//послідовно:
+//1 додасть поле mood зі значенням 'happy'
+//2 замінить hobby на 'skydiving'
+//3 замінить значення premium на false
+//4 виводить зміст об'єкта users у форматі
+//'<ключ>:<значення>' використовуя Object.keys() та for...of
+const user = {
+  name: "John",
+  age: 20,
+  hobby: "tenis",
+  premium: true,
+};
+
+user.mood = "happy";
+user.hobby = "skydiving";
+user.premium = false;
+
+const userKeys = Object.keys(user);
+for (const key of userKeys) {
+  console.log(`${key}: ${user[key]}`);
 }
-
-console.log(sum(someArr));
